@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block content %}
+    <div class="columns">
+
+        <div class="main-column is-half is-center">
+            <div class="button field" onclick="get_data()">
+                Get Data
+
+            </div>
+
+        </div>
+        <div class="main-column is-center is-half ">
+            <div id="table-div" >
+                <table class="table is-striped is-hoverable is-bordered roboto-font is-fullwidth">
+                    <thead>
+                    {% for TABLES_DATA in TABULAR_DATA %}
+                    <tr class="has-background-blue">
+                        {% for column in TABLES_DATA %}
+                            <th>{{ column }}</th>
+                        {% endfor %}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        {% for column in TABLES_DATA %}
+                            <td class="secondary-font">{{ TABLES_DATA[column] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+    $('#table-div').hide();
+    </script>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="columns">
+        <div class="column has-text-centered is-center">
+            <div class="field has-text-centered">
+                <div class="file is-medium is-light is-info is-boxed has-name has-text-centered is-place-content-center">
+                    <label class="file-label">
+                        <input form="json-data-form" class="file-input" type="file"
+                               name="json-data" id="json-data-file"
+                               accept=".json" onchange="change_file_name(this)">
+                        <span class="file-cta" style="min-width:23rem">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Browse
+                            </span>
+                        </span>
+                        <span class="file-name has-background-white" id="json-data-filename"
+                              style="min-width:23rem">
+                            JSON FILE
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="field has-text-centered m-3">
+                <div class="control has-text-centered">
+                    <div class="button is-medium is-link is-rounded-05 is-60-width"
+                         id="upload-json-data-button"
+                         onclick="upload_json_data()">
+                        Upload JSON FILE
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
