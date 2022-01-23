@@ -1,11 +1,11 @@
 # financepeer_task
 
 # Download requirement
-pip install -r requirements.tx
+pip install -r requirements.txt
 
 # To run
 
 python main.py
 
 # Database used
-MongoDB
+MongoDB and db-name: tvs
